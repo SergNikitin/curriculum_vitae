@@ -1,0 +1,33 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage [utf8] {inputenc}
+% включаем переносы для русского и английского языка
+\usepackage[english,russian]{babel}
+% Начинать первый параграф раздела следует с красной строки
+\usepackage{indentfirst}
+% Выбор внутренней TEX−кодировки
+\usepackage [T2A]{fontenc}
+
+\usepackage{cmap}
+\usepackage{xcolor}
+
+\usepackage{hyperref}
+\definecolor{LINKCOLOUR}{rgb}{0.1,0.0,0.9}
+\hypersetup{colorlinks,breaklinks,urlcolor=LINKCOLOUR,linkcolor=LINKCOLOUR}
+
+\usepackage{geometry} % Поля страницы
+\geometry{left=2.5cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\raggedright}{\color{green}}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{2pt}{3pt}{3pt} % Spacing around sections
+
+\pagestyle{empty}
+
+\begin{document}
+
+{\LARGE\textbf{Сергей Никитин}}
+
+\end{document}
