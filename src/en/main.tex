@@ -1,20 +1,21 @@
 \documentclass[a4paper, 11pt]{article}
 \usepackage [utf8] {inputenc}
-% включаем переносы для русского и английского языка
+% Russian and english word-wrap
 \usepackage[english,russian]{babel}
-% Начинать первый параграф раздела следует с красной строки
+% Start new lines with a shift from the left
 \usepackage{indentfirst}
-% Выбор внутренней TEX−кодировки
+% Choosing of internal TEX-encoding
 \usepackage[T2A]{fontenc}
 
 \usepackage{cmap}
 \usepackage{xcolor}
+\usepackage{longtable}
 
 \usepackage{hyperref}
 \definecolor{LINKCOLOUR}{rgb}{0.1,0.0,0.9}
 \hypersetup{colorlinks,breaklinks,urlcolor=LINKCOLOUR,linkcolor=LINKCOLOUR}
 
-\usepackage{geometry} % Поля страницы
+\usepackage{geometry} % Page margins
 \geometry{left=2.5cm}
 \geometry{right=2cm}
 \geometry{top=2cm}
@@ -29,5 +30,124 @@
 \begin{document}
 
 {\LARGE\textbf{Sergey Nikitin}}
+
+\begin{flushright}
+    {\itshape
+        Russian Federation, Moscow, Polarnaya st., 12, apt. 25                                  \\
+        +7-968-708-71-71                                                                        \\
+        \href{mailto:snikitin@outlook.com}{snikitin@outlook.com}                                \\
+        \href{https://github.com/SergNikitin}{github.com/SergNikitin}                           \\
+        \href{http://ru.linkedin.com/in/nikitinsergey}{ru.linkedin.com/in/nikitinsergey}        \\
+        \href{http://stackoverflow.com/users/3375765/sergey-nikitin}{stackoverflow.com profile} \\
+    }
+\end{flushright}
+
+\section{Skills}
+\begin{tabular}{ll}
+    Programming languages    & C++ (C++14), C (C99), Lua (5.1, 5.2)            \\
+    Developement for OS      & Mainly Windows, some Linux experience           \\
+    Programming software     & VS2015, GNU-Make, CMake, Doxygen, LaTeX, Matlab \\
+    VCS                      & Git, Subversion                                 \\
+    3D-modelling             & Autodesk Inventor
+\end{tabular}
+
+\section{Experience}
+\begin{longtable}{p{25mm}|p{110mm}}
+    November 2014 -     & \textbf{BitBox Ltd.}                                                        \\
+    Current             & C/C++ game developer - \href{http://lifeisfeudal.com/mmo}{Life Is Feudal}   \\
+                        &
+    \begin{itemize}
+        \item   Developed from scratch module for dynamic geometry generation
+                of in-game tunnels/mines (based on
+                \href{https://ru.wikipedia.org/wiki/Marching_cubes}{marching cubes}
+                algorithm) - a good algorithmical and architectural task
+        \item   Redone system for multi-threaded loading/unloading of game
+                objects (based on the distance from the player to the object)
+        \item   Integrated Unicode support (based on the \href{http://site.icu-project.org/}{ICU}
+                library) into the game engine (including support in internal
+                string-related classes and functions) and added localization
+                support
+        \item   Implemented a variety of gameplay mechanics
+        \item   Constantly transition the code base from obsolete C++ techniques
+                to more convinient and safe ones (move-semantics, strict resource
+                ownership with smart-pointers etc.)
+        \item   A lot of reviewing of code of other team members
+    \end{itemize}                                                                   \\
+
+    \pagebreak[4]
+    April 2013 -        & \textbf{\href{http://www.3detection.ru/}{3Detection Lab.}}\\
+    November 2014       & Junior C/C++ developer                                    \\
+                        &
+    \begin{itemize}
+        \item   Participated in developement of automatic control systems for
+                household telepresence robots of R.BOT Synergy family - an
+                interesting opportunity to use all of the fundamental knowledge
+                gained during the years in the university
+        \item   Developed a set of tools for testing and calibration of
+                R.BOT Synergy robots - interacted a lot with
+                software users, gained some expirience in user interface creation
+        \item   Participated in developement of a tool for x86 platform (Windows,
+                Linux), written in C++, Lua 5.1 that is responsible for debugging
+                and control of custom microprocessor systems
+        \item   Evolved software for corporate ACS systems
+    \end{itemize}                                                                   \\
+
+    \pagebreak[3]
+    July 2011 - & \textbf{\href{http://www.3detection.ru/}{3Detection Lab.}}        \\
+    April 2013  & Technician                                                        \\
+                &
+    \begin{itemize}
+        \item   Production of household robots
+        \item   Testing, diagnostics and repairs of household robots
+    \end{itemize}                                                                   \\
+\end{longtable}
+
+\section{Education}
+\begin{tabular}{p{25mm}|p{110mm}}
+2008 - 2014         & Bauman Moscow State Technical University»         \\
+                    & «Mechanical Engineering» Department               \\
+                    & «Robotics and Mechatronics» Speciality            \\
+                    & URL: \href{http://www.bmstu.ru/en/}{bmstu.ru/en}  \\
+                    & Degree: Specialist                                \\
+                    & Average grade: 4,95/5                             \\
+                    & Diploma with honors
+\end{tabular}
+
+\section{Scientific and fundamental knowledge}
+\begin{itemize}
+    \item Automated control systems
+    \item Microprocessors
+    \item Linear algebra, discrete mathematics
+    \item Theoretical mechanics
+\end{itemize}
+
+\section{Language skills}
+\begin{itemize}
+    \item   Russian    - native language
+    \item   English    - full professional proficiency, constantly practicing by
+            reading books, watching movies, playing games in english
+\end{itemize}
+
+\section{Professional interests}
+\begin{itemize}
+    \item   Game developement
+    \item   Creation of modules/frameworks/tools that help me and others
+            to write simpler, more expressive and safer code
+    \item   Planning of software interfaces and software architecture
+    \item   Pushing the boundaries of my knowledge through programming books
+            and lectures (\href{http://cppcon.org/}{CppCon} etc.). Last finished book - «Modern
+            Effective C++» by Scott Meyers. Currently reading «C++ Concurrency in
+            Action» by Anthony Williams.
+    \item   Rust programming language
+    \item   3D-modelling
+\end{itemize}
+
+\section{Other interests}
+\begin{itemize}
+    \item   Reading -
+            \href{https://www.goodreads.com/user/show/29629010-sergey-nikitin}{goodreads.com profile}
+    \item   Rock band live shows - U2, Depeche Mode, Coldplay, Rammstein
+    \item   Sports: rock climbing, swimming
+\end{itemize}
 
 \end{document}
