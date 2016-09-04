@@ -1,20 +1,21 @@
 \documentclass[a4paper, 11pt]{article}
 \usepackage [utf8] {inputenc}
-% включаем переносы для русского и английского языка
+% Russian and english word-wrap
 \usepackage[english,russian]{babel}
-% Начинать первый параграф раздела следует с красной строки
+% Start new lines with a shift from the left
 \usepackage{indentfirst}
-% Выбор внутренней TEX−кодировки
+% Choosing of internal TEX-encoding
 \usepackage[T2A]{fontenc}
 
 \usepackage{cmap}
 \usepackage{xcolor}
+\usepackage{longtable}
 
 \usepackage{hyperref}
 \definecolor{LINKCOLOUR}{rgb}{0.1,0.0,0.9}
 \hypersetup{colorlinks,breaklinks,urlcolor=LINKCOLOUR,linkcolor=LINKCOLOUR}
 
-\usepackage{geometry} % Поля страницы
+\usepackage{geometry} % Page margins
 \geometry{left=2.5cm}
 \geometry{right=2cm}
 \geometry{top=2cm}
@@ -32,41 +33,67 @@
 
 \begin{flushright}
     {\itshape
-        ул. Полярная, 12, г. Москва, Россия                                                 \\
-        +7-968-708-71-71                                                                    \\
-        \href{mailto:snikitin@outlook.com}{snikitin@outlook.com}                            \\
-        \href{https://github.com/SergNikitin}{github.com/SergNikitin}                       \\
-        \href{http://ru.linkedin.com/in/nikitinsergey}{ru.linkedin.com/in/nikitinsergey}    \\
+        ул. Полярная, 12, г. Москва, Россия                                                     \\
+        +7-968-708-71-71                                                                        \\
+        \href{mailto:snikitin@outlook.com}{snikitin@outlook.com}                                \\
+        \href{https://github.com/SergNikitin}{github.com/SergNikitin}                           \\
+        \href{http://ru.linkedin.com/in/nikitinsergey}{ru.linkedin.com/in/nikitinsergey}        \\
+        \href{http://stackoverflow.com/users/3375765/sergey-nikitin}{stackoverflow.com profile} \\
     }
 \end{flushright}
 
 \section{Навыки}
 \begin{tabular}{ll}
-    Языки программирования   & C (C99), C++ (ISO/IEC 2003), Lua (5.1, 5.2)  \\
-    Прикладные программы     & GNU-Make, CMake, Doxygen, LaTeX, Matlab      \\
-    Системы контроля версий  & Git, Subversion                              \\
-    3D-моделирование         & Autodesk Inventor, Blender
+    Языки программирования   & C++ (C++14), C (C99), Lua (5.1, 5.2)            \\
+    Прикладные программы     & VS2015, GNU-Make, CMake, Doxygen, LaTeX, Matlab \\
+    Системы контроля версий  & Git, Subversion                                 \\
+    3D-моделирование         & Autodesk Inventor
 \end{tabular}
 
 \section{Опыт работы}
-\begin{tabular}{p{25mm}|p{110mm}}
-    Апрель 2013 -       & \textbf{«Лаборатория трехмерного зрения»}                 \\
-    по настоящее время  & Младший C/C++ разработчик                                 \\
+\begin{longtable}{p{25mm}|p{110mm}}
+    Ноябрь 2014 -       & \textbf{BitBox Ltd.}                                                        \\
+    по настоящее время  & C/C++ разработчик - игра \href{http://lifeisfeudal.com/mmo}{Life Is Feudal} \\
                         &
     \begin{itemize}
-        \item   Развиваю системы автоматического управления семейства бытовых
+        \item   Разработал с нуля систему динамической генерации геометрии
+                игровых туннелей и шахт (на основе алгоритма
+                \href{https://ru.wikipedia.org/wiki/Marching_cubes}{марширующих кубов})
+                - хорошая алгоритмическая и архитектурная задача
+        \item   Переработал систему мульти-поточной загрузки/выгрузки игровых
+                объектов в зависимости от расстояния от игрока до объекта
+        \item   Внедрил в игровой движок поддержку Unicode на основе библиотеки
+                \href{http://site.icu-project.org/}{ICU} (включая внутренние
+                классы и функции для работы со строками) и локализации на
+                различные языки
+        \item   Реализовал ряд игровых механик
+        \item   Непрерывно занимаюсь постепенным переводом кода игрового движка
+                и игровой логики с устаревших С++-практик на более удобные и
+                безопасные (move-семантика, чёткое владение ресурсами через
+                smart-pointer-ы и т.д.)
+        \item   Провожу большое количество ревью кода других членов команды
+    \end{itemize}                                                                   \\
+
+    \pagebreak[4]
+    Апрель 2013 -       & \textbf{«Лаборатория Трёхмерного зрения»}                 \\
+    Ноябрь 2014         & Младший C/C++ разработчик                                 \\
+                        &
+    \begin{itemize}
+        \item   Развивал системы автоматического управления семейства бытовых
                 роботов R.BOT Synergy - интересный опыт практического применения
                 фундаментальных знаний, полученных в университете
-        \item   Разрабатываю пакет комплексного тестирования и отладки аппаратной
+        \item   Разрабатывал пакет комплексного тестирования и отладки аппаратной
                 части R.BOT Synergy с использованием графической библиотеки
                 Tecgraf IUP - опыт плотного взаимодействия с пользователями,
                 создания графических интерфейсов
-        \item   Поддерживаю ПО на платформу x86, написанное на C++, Lua 5.1
-                для управления, отладки и контроля за микроконтролерными системами
-        \item   Развиваю ПО для корпоративной системы контроля и управления
+        \item   Поддерживал ПО на платформу x86 (Windows, Linux), написанное на
+                C++, Lua 5.1 для управления, отладки и контроля за
+                микроконтролерными системами
+        \item   Развивал ПО для корпоративной системы контроля и управления
                 доступом
     \end{itemize}                                                                   \\
 
+    \pagebreak[3]
     Июль 2011 - & \textbf{«Лаборатория трехмерного зрения»}                         \\
     Апрель 2013 & Техник                                                            \\
                 &
@@ -74,7 +101,7 @@
         \item   Комплексная диагностика бытовых роботов
         \item   Производство бытовых роботов
     \end{itemize}                                                                   \\
-\end{tabular}
+\end{longtable}
 
 \section{Образование}
 \begin{tabular}{p{25mm}|p{110mm}}
@@ -83,7 +110,7 @@
                     & Кафедра «Специальная робототехника и мехатроника» \\
                     & URL: \href{http://bmstu.ru}{bmstu.ru}             \\
                     & Cтепень: Специалист                               \\
-                    & Средний балл: 4,95                                \\
+                    & Средний балл: 4,95/5                              \\
                     & Диплом с отличием
 \end{tabular}
 
@@ -104,27 +131,24 @@
 
 \section{Профессиональные интересы}
 \begin{itemize}
-    \item   Классические алгоритмы и их реализация, разбираю книгу Т. Кормэна,
-            ``Introduction to Algorithms, Third Edition''
-    \item   Изучение путей общего улучшения собственного (а иногда и чужого)
-            кода посредством изучения таких книг как «Чистый код» Р. Мартина и
-            «Эффективный C++» С. Мейерса
-    \item   Изучение Python
-    \item   Лекции и семинары по программированию, последнее посещённое мероприятие
-            - лекция С. Мейерса в рамках ``C++ Party'' в Яндексе на тему развития
-            С++
+    \item   Разработка видео-игр
+    \item   Работа над модулями/фреймворками/утилитами, упрощающими написание
+            кода себе и другим разработчикам, делающими код более выразительным
+            и безопасным
+    \item   Продумывание программных интерфейсов, архитектуры программных модулей
+    \item   Расширение знаний через профессиональную литературу и видео-лекции
+            (записи с CppCon и т.д.). Последняя прочтённая книга - «Modern
+            Effective C++», Scott Meyers. Сейчас читаю «C++ Concurrency in
+            Action», Anthony Williams.
     \item   3D-моделирование
 \end{itemize}
 
 \section{Прочие интересы}
 \begin{itemize}
-    \item   Разработка игр: в компании с моим другом разрабатываем
-            небольшую игру, в которой используем C++, Polycode Framework и CMake -
-            \href{https://github.com/thegreenbox/helium}{github.com/TheGreenBox/Helium}
     \item   Художественная литература -
             \href{https://www.goodreads.com/user/show/29629010-sergey-nikitin}{Goodreads.com profile}
     \item   Музыкальные концерты U2, Depeche Mode, Coldplay, Rammstein
-    \item   Спорт: бально-спортивные танцы, плавание
+    \item   Спорт: скалолазание, плавание
 \end{itemize}
 
 \end{document}
